@@ -1,9 +1,9 @@
 ![b191ba7c6456d71b25cb65bbdfd20303.png](https://anonimag.es/i/b191ba7c6456d71b25cb65bbdfd20303.png)
 
 #### Abstract 
-Using the original zip bomb concept, we can send a gziped web-page (standard compressed web-page) to the client.  
-The browser will unzip the small compressed page into a very big file, potentially crashing it.  
-This aims to disrupt or crash bots that scan websites to find vulnerabilities. 
+* Using the [famous zip bomb concept](https://www.youtube.com/watch?v=jnDk8BcqoR0) *(Silicon Valley S3E07)*, we can send a gziped web-page (standard compressed web-page) to the client.  
+* The browser will unzip the small compressed page into a very big file, potentially crashing it.  
+* This aims to disrupt or crash bots that scan websites to find vulnerabilities. 
 
 #### TL;DR 
 
@@ -68,3 +68,5 @@ Default deployment sets options to ```normal 1```
 * Python gzip implementation  
 * Load evasion URIs from DirBuster  
 * Fingerprinting JS before payload delivery  
+
+[[yt]![https://www.youtube.com/embed/jnDk8BcqoR0](https://www.youtube.com/embed/jnDk8BcqoR0)]
