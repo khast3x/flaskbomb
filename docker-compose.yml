@@ -1,6 +1,10 @@
-
+version: "3"
 services:
-    flaskbomb:
-            image: khanon/flaskbomb:latest
-            ports:
-              - 80:5000
+  web:
+    image: khanon/flaskbomb:latest
+    deploy:
+      replicas: 1
+      restart_policy:
+        condition: on-failure
+    ports:
+      - "80:5000"
