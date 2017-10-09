@@ -3,4 +3,4 @@ services:
     flask_bomb:
         ports:
             - '80:5000'
-        image: 'flask_bomb:latest'
+        image: 'flaskbomb:latest'
