@@ -1,6 +1,6 @@
-version: 3
+version: "3.2"
 services:
-    flask_bomb:
+    flaskbomb:
         ports:
             - '80:5000'
-        image: 'flaskbomb:latest'
+        image: 'khanon/flaskbomb:latest'
