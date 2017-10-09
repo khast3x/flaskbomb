@@ -5,7 +5,7 @@
 * The browser will unzip the small compressed page into a very big file, potentially crashing it.  
 * This aims to disrupt or crash bots that scan websites to find vulnerabilities. 
 
-#### tldr 
+#### tldr - Python GZIP-Bomb HTTP Server
 
 >GZip HTTP Bombing in Python for everyone.  
 
@@ -19,7 +19,7 @@
 
 >Based on this [excellent piece by Christian Haschek](https://blog.haschek.at/2017/how-to-defend-your-website-with-zip-bombs.html)   
 
-# Flask Bomb - Python GZIP-Bomb HTTP Server 
+# Flask Bomb  
 
 This repository contains the necessary files to:  
 * Host a quick & dirty Flask web server that responds to web requests with a GZip archive as a response page.  
@@ -54,7 +54,7 @@ Default deployment sets options to ```normal 1```
 ## Details & Notes
 * Gzip's algorithm enables the possibility to append archives
   * ```normal``` method generates the payload in one single ```dd``` command
-  * ```fast``` method generates a 1Gb payload and appends itself n times. The final payload is bigger but generates much faster.
+  * ```fast``` method generates a 1GB payload and appends itself n times. The final payload is bigger but generates much faster.
 * Python 3
 * Since this uses Flask's built-in web server, internal port is ```5000```
 * The payload is generated using ```gzip``` and ```dd``` on Docker entrypoint.
