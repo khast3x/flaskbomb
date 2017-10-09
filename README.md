@@ -23,6 +23,7 @@ This repository contains the necessary files to:
 ### Features:
 * Quick and easy
 * Fast deployment using docker
+* Alpine based Docker container
 * Very generic code
   * Implement your own rules or payloads !
 * (next)User-Agent evasion based on original work
