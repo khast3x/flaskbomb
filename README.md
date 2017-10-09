@@ -23,7 +23,7 @@ This repository contains the necessary files to:
 * Host a quick & dirty Flask server that responds to requests with a GZip archive as a response page.  
 
 * The recommended way to use FlaskBomb is by deploying it with Docker. You can try it here:  
-![http://play-with-docker.com?stack=https://raw.githubusercontent.com/kh4st3x/flaskbomb/master/docker-compose.yml&stack_name=flaskbomb](https://anonimag.es/i/c465e530530d506e2264ab9cb37b42f3.png)
+[![Try with Play-with-Docker](https://anonimag.es/i/c465e530530d506e2264ab9cb37b42f3.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/kh4st3x/flaskbomb/master/docker-compose.yml&stack_name=flaskbomb)
 -------
 ### Features:
 * Quick and easy
