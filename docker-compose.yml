@@ -1,5 +1,6 @@
 version: "3.2"
-flaskbomb:
-    image: khanon/flaskbomb:latest
-    ports:
-        - 80:5000
+services:
+    flaskbomb:
+        image: khanon/flaskbomb:latest
+        ports:
+            - 80:5000
