@@ -1,11 +1,15 @@
 ![b191ba7c6456d71b25cb65bbdfd20303.png](https://anonimag.es/i/b191ba7c6456d71b25cb65bbdfd20303.png)
 
 #### Abstract 
-*Using the original zip bomb concept, we can send a gziped web-page (standard compressed web-page) to the client.*  
-*The browser will unzip the small compressed page into a very big file, potentially crashing it.*  
-*This aims to disrupt or crash bots that scan websites to find vulnerabilities.*
+Using the original zip bomb concept, we can send a gziped web-page (standard compressed web-page) to the client.  
+The browser will unzip the small compressed page into a very big file, potentially crashing it.  
+This aims to disrupt or crash bots that scan websites to find vulnerabilities. 
+
+#### TL;DR 
 
 >GZip HTTP Bombing in Python for everyone.  
+
+>Docker friendly
   
 >It even has it's own low effort logo.  
 
@@ -18,8 +22,9 @@
 This repository contains the necessary files to:  
 * Host a quick & dirty Flask server that responds to requests with a GZip archive as a response page.  
 
-* The recommended way to try this is by deploying it with Docker. You can try it here: [Here](http://play-with-docker.com?stack=https://raw.githubusercontent.com/kh4st3x/flaskbomb/master/docker-compose.yml&stack_name=flaskbomb)  
-
+* The recommended way to use FlaskBomb is by deploying it with Docker. You can try it here:  
+![http://play-with-docker.com?stack=https://raw.githubusercontent.com/kh4st3x/flaskbomb/master/docker-compose.yml&stack_name=flaskbomb](https://anonimag.es/i/c465e530530d506e2264ab9cb37b42f3.png)
+-------
 ### Features:
 * Quick and easy
 * Fast deployment using docker
@@ -35,20 +40,25 @@ docker run -it -p 80:5000 khanon/flaskbomb <normal|fast> <X> # X is the final pa
 # Example:  
 docker run -it -p 80:5000 khanon/flaskbomb fast 20
 ````
-Default deployment sets options to ```normal 1```
-### Demo
+Default deployment sets options to ```normal 1```  
 
-**ASCINEMA**
+## Demo - 20G Payloads
+#### Standard docker build from git, demo with cURL
+[![asciicast](https://asciinema.org/a/141464.png)](https://asciinema.org/a/141464)
+------
+#### Standard deploy from docker hub, demo with Nikto
+[![asciicast](https://asciinema.org/a/141465.png)](https://asciinema.org/a/141465)
 
-### Details & Notes
+## Details & Notes
+* Gzip's algorithm enables the possibility to append archives
+  * ```normal``` method generates the payload in one single ```dd``` command
+  * ```fast``` method generates a 1Gb payload and appends itself n times. The final payload is bigger but generates much faster.
 * Python 3
+* Since this uses Flask's built-in web server, internal port is ```5000```
 * The payload is generated using ```gzip``` and ```dd``` on Docker entrypoint.
   * *NIX based for now
   * Full python payload is up for next release
 * Flask development server is used. It is recommended to deploy the application on a WGSI + HTTPD
-* Gzip's algorithm enables the possibility to append archives
-  * ```normal``` method generates the payload in one single ```dd``` command
-  * ```fast``` method generates a 1Gb payload and appends itself n times. The final payload is bigger but generates much faster.
 * For those not using docker, generate the payload using the bash commands in ```entrypoint.sh``` and save it as ```./static/cake.gzip``` 
   * The python GZip implementation should make this easier in the future
 
