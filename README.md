@@ -1,13 +1,15 @@
 ![b191ba7c6456d71b25cb65bbdfd20303.png](https://anonimag.es/i/b191ba7c6456d71b25cb65bbdfd20303.png)
 
 #### Abstract 
-* Using the [famous zip bomb concept](https://www.youtube.com/watch?v=jnDk8BcqoR0) *(Silicon Valley S3E07)*, we can send a gziped web-page (standard compressed web-page) to the client.  
+* Using the [famous zip bomb concept](https://www.youtube.com/watch?v=jnDk8BcqoR0) *(Silicon Valley S3E07)*, we can send a compressed web-page to the client.  
 * The browser will unzip the small compressed page into a very big file, potentially crashing it.  
 * This aims to disrupt or crash bots that scan websites to find vulnerabilities. 
 
-#### TL;DR 
+#### tldr 
 
 >GZip HTTP Bombing in Python for everyone.  
+
+>Uses Python Flask framework  
 
 >Docker friendly
   
@@ -20,16 +22,16 @@
 # Flask Bomb - Python GZIP-Bomb HTTP Server 
 
 This repository contains the necessary files to:  
-* Host a quick & dirty Flask server that responds to requests with a GZip archive as a response page.  
+* Host a quick & dirty Flask web server that responds to web requests with a GZip archive as a response page.  
 
 * The recommended way to use FlaskBomb is by deploying it with Docker. You can try it here:  
 [![Try with Play-with-Docker](https://anonimag.es/i/c465e530530d506e2264ab9cb37b42f3.png)](http://play-with-docker.com?stack=https://raw.githubusercontent.com/kh4st3x/flaskbomb/master/docker-compose.yml&stack_name=flaskbomb)
 -------
 ### Features:
 * Quick and easy
-* Fast deployment using docker
-* Alpine based Docker container
-* Very generic code
+* Fast deployment using Docker
+* Lightweight Alpine based Docker container
+* Generic code
   * Implement your own rules or payloads !
 * (next)User-Agent evasion based on original work
 * Choose classic payload generation or faster append generation method    
