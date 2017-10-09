@@ -63,10 +63,8 @@ Default deployment sets options to ```normal 1```
   * The python GZip implementation should make this easier in the future
 
 
-### Roadmap  
+### Roadmap  
 * Evasion  
 * Python gzip implementation  
 * Load evasion URIs from DirBuster  
 * Fingerprinting JS before payload delivery  
-
-[[yt]![https://www.youtube.com/embed/jnDk8BcqoR0](https://www.youtube.com/embed/jnDk8BcqoR0)]
