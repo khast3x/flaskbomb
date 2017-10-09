@@ -1,5 +1,6 @@
+
 services:
     flaskbomb:
-        image: khanon/flaskbomb:latest
-        ports:
-            - 80:5000
+            image: khanon/flaskbomb:latest
+            ports:
+              - 80:5000
