@@ -53,7 +53,7 @@ Default deployment sets options to ```normal 1```
 
 
 ### Roadmap  
-[ ] Evasion  
-[ ] Python gzip implementation  
-[ ] Load evasion URIs from DirBuster  
-[ ] Fingerprinting JS before payload delivery  
+* Evasion  
+* Python gzip implementation  
+* Load evasion URIs from DirBuster  
+* Fingerprinting JS before payload delivery  
