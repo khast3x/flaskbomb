@@ -30,9 +30,9 @@ This repository contains the necessary files to:
 
 ### Usage:
 ````bash
-docker run -it khanon/flaskbomb <normal|fast> <X> # X is the final payload's size in GB  
+docker run -it -p 80:5000 khanon/flaskbomb <normal|fast> <X> # X is the final payload's size in GB  
 # Example:  
-docker run -it khanon/flaskbomb fast 20
+docker run -it -p 80:5000 khanon/flaskbomb fast 20
 ````
 
 ### Demo
