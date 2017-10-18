@@ -1,9 +1,9 @@
 FROM python:3-alpine
 
 RUN apk --update --no-cache add gzip
-
-WORKDIR /app
 ADD . /app
+WORKDIR /app
+
 
 RUN pip install -r requirements.txt
 
